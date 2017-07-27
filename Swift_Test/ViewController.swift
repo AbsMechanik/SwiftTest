@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         
         buttonCount += 1
         print(buttonCount)
+        print("Github link is active")
         
         if (buttonCount >= 10)
         {
