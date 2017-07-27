@@ -34,6 +34,7 @@ class ViewController: UIViewController {
             myLabel.textColor = UIColor.brown
         }
         
+        print("Git is linked")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
