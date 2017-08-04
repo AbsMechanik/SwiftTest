@@ -8,15 +8,41 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
     
     //button tap counter
     var buttonCount = 0
 
     @IBOutlet weak var myLabel: UILabel!
     
-    @IBAction func buttonTapped(_ sender: Any) {
+    @IBOutlet weak var topTextField: UITextField!
+    
+    @IBOutlet weak var bottomTextField: UITextField!
+    
+    @IBOutlet weak var additionSwitch: UISwitch!
+    
+    @IBAction func buttonTapped(_ sender: Any)
+    {
         
+        let addition = additionSwitch.isOn
+        
+        if addition
+        {
+            let sum = Double(topTextField.text!)! + Double(bottomTextField.text!)!
+            
+            myLabel.text = "\(topTextField.text!) + \(bottomTextField.text!) = \(sum)"
+        }
+        
+        else
+        {
+            let sum = Double(topTextField.text!)! - Double(bottomTextField.text!)!
+            
+            myLabel.text = "\(topTextField.text!) - \(bottomTextField.text!) = \(sum)"
+        }
+        
+        
+        /*
         buttonCount += 1
         print(buttonCount)
         print("Github link is active")
@@ -36,6 +62,7 @@ class ViewController: UIViewController {
         }
         
         print("Git is linked")
+ */
     }
     override func viewDidLoad() {
         super.viewDidLoad()
